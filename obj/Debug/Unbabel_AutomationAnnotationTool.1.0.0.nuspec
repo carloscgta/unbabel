@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>Unbabel_AutomationAnnotationTool</id>
+    <version>1.0.0</version>
+    <authors>Unbabel_AutomationAnnotationTool</authors>
+    <owners>Unbabel_AutomationAnnotationTool</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp2.1">
+        <dependency id="Appium.WebDriver" version="3.0.0.2" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.NETCore.App" version="2.1.0" exclude="Build,Analyzers" />
+        <dependency id="Selenium.WebDriver" version="3.14.0" exclude="Build,Analyzers" />
+        <dependency id="SpecFlow" version="2.4.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Inmetrics\source\repos\Unbabel_AutomationAnnotationTool\Unbabel_AutomationAnnotationTool\bin\Debug\netcoreapp2.1\Unbabel_AutomationAnnotationTool.runtimeconfig.json" target="lib\netcoreapp2.1\Unbabel_AutomationAnnotationTool.runtimeconfig.json" />
+    <file src="C:\Users\Inmetrics\source\repos\Unbabel_AutomationAnnotationTool\Unbabel_AutomationAnnotationTool\bin\Debug\netcoreapp2.1\Unbabel_AutomationAnnotationTool.dll" target="lib\netcoreapp2.1\Unbabel_AutomationAnnotationTool.dll" />
+  </files>
+</package>
