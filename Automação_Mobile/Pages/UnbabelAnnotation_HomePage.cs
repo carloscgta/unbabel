@@ -22,9 +22,52 @@ namespace Automação_Mobile.Pages
         [CacheLookup]
         public IWebElement linkTask { get; set; }
 
+        
+        [FindsBy(How = How.XPath, Using = "//div[@class='c-ToggleGroup__item is-active'][text()[contains(.,'GT')]]")]
+        [CacheLookup]
+        public IWebElement iconGT { get; set; }
 
 
-       [FindsBy(How = How.XPath, Using = "//div[@class='c-TopBar__navWrapper']")]
+
+        [FindsBy(How = How.XPath, Using = "//*[@class='c-ToggleGroup__item is-active'][text()[contains(.,'AN')]]")]
+        [CacheLookup]
+        public IWebElement iconAN { get; set; }
+
+        [FindsBy(How = How.XPath, Using = "//*[@class='c-ToggleGroup__item is-active'][text()[contains(.,'MK')]]")]
+        [CacheLookup]
+        public IWebElement iconMK { get; set; }
+
+        
+
+        [FindsBy(How = How.XPath, Using = "//*[@class='c-TranslationViewer__line']")]
+        [CacheLookup]
+        public IWebElement divTextTranslationViewer  { get; set; }
+
+        
+
+        [FindsBy(How = How.XPath, Using = "//input[@id='searchErrorTypes']")]
+        [CacheLookup]
+        public IWebElement inputErrorType { get; set; }
+
+        
+        [FindsBy(How = How.XPath, Using = "//li[@class='c-MarkError__item is-open']")]
+        [CacheLookup]
+        public IWebElement listtErrorType { get; set; }
+
+
+        
+
+        [FindsBy(How = How.XPath, Using = "//div[@class='c-Sidebar__tab'][text()[contains(.,'Propose Glossary Terms')]]")]
+        [CacheLookup]
+        public IWebElement spanGlossaryTerms { get; set; }
+
+        
+        [FindsBy(How = How.XPath, Using = "//div[@class='c-Sidebar__tab'][text()[contains(.,'Finish or Report')]]")]
+        [CacheLookup]
+        public IWebElement spanFinishReport { get; set; }
+
+
+        [FindsBy(How = How.XPath, Using = "//div[@class='c-TopBar__navWrapper']")]
         //[CacheLookup]
         //public IWebElement toDoTasksIconsListData { get; set; }
         public static IList<IWebElement> toDoTasksIconsListData;
