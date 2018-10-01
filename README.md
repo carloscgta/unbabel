@@ -11,7 +11,6 @@ What is necessary to running this framework:
 4. WebDriver Support
 5. Google chrome driver
 
-
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium;
