@@ -11,22 +11,44 @@ namespace Automação_Mobile.Pages
 {
     class UnbabelAnnotation_HomePage : Base
     {
-
-        public UnbabelAnnotation_HomePage(AndroidDriver<AndroidElement> driver)
+        public static IWebDriver driver;
+        public UnbabelAnnotation_HomePage(IWebDriver driver)
         {
             PageFactory.InitElements(this, new RetryingElementLocator(driver, TimeSpan.FromSeconds(30)));
         }
 
-        
-
+     
         [FindsBy(How = How.XPath, Using = "//a[@href='/interface/5ba8b2a2f8b6d6002239e16b/']")]
         [CacheLookup]
         public IWebElement linkTask { get; set; }
 
-     
 
 
-        //public IWebElement txtNomeUsuarioLogado => driver.FindElement(By.XPath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup[2]/android.view.ViewGroup/android.view.ViewGroup/android.view.ViewGroup/android.widget.ScrollView/android.view.ViewGroup/android.view.ViewGroup[1]/android.view.ViewGroup/android.widget.TextView"));
+       [FindsBy(How = How.XPath, Using = "//div[@class='c-TopBar__navWrapper']")]
+        //[CacheLookup]
+        //public IWebElement toDoTasksIconsListData { get; set; }
+        public static IList<IWebElement> toDoTasksIconsListData;
+
+        
+
+        public void CheckToDoTask()
+        {
+            
+            IList<IWebElement> allOptions = toDoTasksIconsListData;
+
+            string atribute = null;
+            
+            foreach (IWebElement element in allOptions)
+            {
+                atribute = element.TagName;
+                if(atribute.Equals("To Do"))
+                {
+                    element.Click();
+                }
+                
+            }
+            
+        }
 
         public void findTasksLink()
         {
@@ -36,5 +58,7 @@ namespace Automação_Mobile.Pages
             
 
         }
+        
+
     }
 }

@@ -19,7 +19,7 @@ namespace Automação_Mobile.Pages
 
         //a[@href='/interface/5ba8b2a2f8b6d6002239e16b/']
 
-        [FindsBy(How = How.XPath, Using = "//android.widget.TextView[@text='Login']")]
+        [FindsBy(How = How.XPath, Using = "//button[@text='Login']")]
         [CacheLookup]
         public IWebElement btnDoLogin { get; set; }
 
