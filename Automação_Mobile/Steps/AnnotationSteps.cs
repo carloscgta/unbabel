@@ -1,4 +1,5 @@
-﻿using Automação_Mobile.Pages;
+﻿using Automação_Mobile.NewFolder1;
+using Automação_Mobile.Pages;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium.Android;
 using OpenQA.Selenium.Chrome;
@@ -11,23 +12,17 @@ namespace Automação_Mobile
     [Binding]
     public class AnnotationSteps
     {
-        public static IWebDriver driver { get; private set; }
-
-        public AnnotationSteps(IWebDriver driver)
-        {
-
-            PageFactory.InitElements(this, new RetryingElementLocator(driver= new ChromeDriver(), TimeSpan.FromSeconds(30)));
-        }
-
-        Login login = new Login(driver);
+       
+       //Login login = new Login();
         string user = "emanuel + annotator6";
         string password = "carlos@unbabel";
 
         [Given(@"I have logged into the applicaton")]
         public void GivenIHaveLoggedIntoTheApplicaton()
         {
-            //Log into the annotation tool
-            login.performLogin(user,password);
+           //Log into the annotation tool
+           
+            
         }
         
         [Given(@"I am in the home page")]

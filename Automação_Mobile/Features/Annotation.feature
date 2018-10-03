@@ -8,4 +8,4 @@ Scenario: Perform the annotation
 	Given I have logged into the applicaton
 	And I am in the home page
 	When I click in the task link
-	Then Perform the annotation task
+

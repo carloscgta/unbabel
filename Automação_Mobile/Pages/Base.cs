@@ -16,14 +16,14 @@ namespace Automação_Mobile
 {
     public class Base
     {
-        WebDriverWait wait;
-        //public AndroidDriver<AndroidElement> driver
+       
+        
         public IWebDriver driver
 
         {
             get
             {
-                return HooksMobile.driver;
+                return driver;
             }
         }
         
@@ -48,8 +48,8 @@ namespace Automação_Mobile
         {
             try
             {
-                var wait = new WebDriverWait(idriver, TimeSpan.FromSeconds(timeout));
-                wait.Until(ExpectedConditions.ElementToBeClickable(elementLocator));
+             //   var wait = new WebDriverWait(idriver, TimeSpan.FromSeconds(timeout));
+                //wait.Until(ExpectedConditions.ElementToBeClickable(elementLocator));
             }
             catch (NoSuchElementException)
             {
@@ -61,10 +61,10 @@ namespace Automação_Mobile
 
     public static void Wait(int miliseconds, int maxTimeOutSeconds = 60)
         {
-            var wait = new WebDriverWait(HooksMobile.driver, new TimeSpan(0, 0, 1, maxTimeOutSeconds));
+          //  var wait = new WebDriverWait(HooksMobile.driver, new TimeSpan(0, 0, 1, maxTimeOutSeconds));
             var delay = new TimeSpan(0, 0, 0, 0, miliseconds);
             var timestamp = DateTime.Now;
-            wait.Until(webDriver => (DateTime.Now - timestamp) > delay);
+            //wait.Until(webDriver => (DateTime.Now - timestamp) > delay);
         }
 
 

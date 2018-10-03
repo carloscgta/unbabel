@@ -14,7 +14,7 @@ namespace Automação_Mobile.Pages
     {
         public Login(IWebDriver driver)
         {
-            PageFactory.InitElements(this, new RetryingElementLocator(driver= new ChromeDriver(), TimeSpan.FromSeconds(30)));
+            PageFactory.InitElements(this, new RetryingElementLocator(driver, TimeSpan.FromSeconds(30)));
         }
 
         //a[@href='/interface/5ba8b2a2f8b6d6002239e16b/']

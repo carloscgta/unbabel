@@ -11,7 +11,7 @@ namespace Automação_Mobile.Pages
 {
     class UnbabelAnnotation_HomePage : Base
     {
-        public static IWebDriver driver;
+        
         public UnbabelAnnotation_HomePage(IWebDriver driver)
         {
             PageFactory.InitElements(this, new RetryingElementLocator(driver, TimeSpan.FromSeconds(30)));
