@@ -11,11 +11,11 @@ What is necessary to running this framework:
 4. WebDriver Support
 5. Google chrome driver
 
-
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium.Support.PageObjects;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
+
 
 Config
 ON this fold there is the "Hooks" class, it is responsible to start the Selenium driver and also start the chrome browser 
