@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Automação_Mobile", "Automação_Mobile\Automação_Mobile.csproj", "{6088F67F-8F27-42A3-B814-164A60631989}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unbabel.Annotation.Test", "Automação_Mobile\Unbabel.Annotation.Test.csproj", "{6088F67F-8F27-42A3-B814-164A60631989}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -10,29 +10,27 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace Automação_Mobile.Features
+namespace Inm.Mobile.Test.UI.Features
 {
     using TechTalk.SpecFlow;
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Annotation", Description="\tOnce logged into the application \r\n\tAs a User a I want to find a link of the tas" +
-        "k and click on it\r\n\tI want to be able to perform the annotation", SourceFile="Features\\Annotation.feature", SourceLine=0)]
-    public partial class AnnotationFeature
+    [TechTalk.SpecRun.FeatureAttribute("Login", SourceFile="UI\\Features\\Login.feature", SourceLine=1)]
+    public partial class LoginFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "Annotation.feature"
+#line 1 "Login.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Annotation", "\tOnce logged into the application \r\n\tAs a User a I want to find a link of the tas" +
-                    "k and click on it\r\n\tI want to be able to perform the annotation", ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("pt-BR"), "Login", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -68,21 +66,18 @@ namespace Automação_Mobile.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Perform the annotation", new string[] {
-                "mytag"}, SourceLine=6)]
-        public virtual void PerformTheAnnotation()
+        [TechTalk.SpecRun.ScenarioAttribute("Efetuar login com sucesso", SourceLine=3)]
+        public virtual void EfetuarLoginComSucesso()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Perform the annotation", null, new string[] {
-                        "mytag"});
-#line 7
-this.ScenarioInitialize(scenarioInfo);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Efetuar login com sucesso", null, ((string[])(null)));
+#line 4
+ this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 8
- testRunner.Given("I have logged into the applicaton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 9
- testRunner.And("I am in the home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 10
- testRunner.When("I click in the task link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 5
+  testRunner.When("efetuar login \"yamrodri@inmetrics.com.br\" \"novagol123\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
+#line 6
+  testRunner.Then("usuário foi logado com sucesso exibindo o nome do usuário \"Gustavo Yam Rodrigues\"" +
+                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entao ");
 #line hidden
             this.ScenarioCleanup();
         }

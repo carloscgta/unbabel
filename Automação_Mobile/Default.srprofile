@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TestProfile xmlns="http://www.specflow.org/schemas/plus/TestProfile/1.5">
-  <Settings projectName="Automação_Mobile" projectId="{6088f67f-8f27-42a3-b814-164a60631989}" />
-  <Execution stopAfterFailures="3" testThreadCount="1" testSchedulingMode="Sequential" />
+  <Settings projectName="Inm.Mobile.Test" projectId="{6088f67f-8f27-42a3-b814-164a60631989}" />
+  
+  <Execution stopAfterFailures="3" testThreadCount="1" testSchedulingMode="Sequential" retryCount="0" />
   <!-- For collecting by a SpecRun server update and enable the following element. For using the 
       collected statistics, set testSchedulingMode="Adaptive" attribute on the <Execution> element.
     <Server serverUrl="http://specrunserver:6365" publishResults="true" />
   -->
   <TestAssemblyPaths>
-    <TestAssemblyPath>Automação_Mobile.dll</TestAssemblyPath>
+    <TestAssemblyPath>Inm.Mobile.Test.dll</TestAssemblyPath>
   </TestAssemblyPaths>
   <DeploymentTransformation>
     <Steps>
