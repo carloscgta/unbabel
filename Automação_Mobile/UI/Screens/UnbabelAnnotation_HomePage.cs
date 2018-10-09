@@ -23,28 +23,32 @@ namespace Inm.Mobile.Test.UI.Screens
         public static readonly By iconMK = By.ClassName("//*[@class='c-ToggleGroup__item is-active'][text()[contains(.,'MK')]]");
 
 
-        public static readonly By divTextTranslationViewer = By.XPath("//*[@class='c-TranslationViewer__line']");
-
-
+        public static readonly By divTextTranslationViewer = By.XPath("//div[@class='c-AnnotateApp__content']");
+        
         public static readonly By inputErrorType = By.XPath("//input[@id='searchErrorTypes']");
 
         public static readonly By listtErrorType = By.XPath("//li[@class='c-MarkError__item is-open']");
 
         public static readonly By spanGlossaryTerms = By.XPath("//div[@class='c-Sidebar__tab'][text()[contains(.,'Propose Glossary Terms')]]");
 
+        public static readonly By englishTargetTextListString = By.XPath("//div[@class='c-TranslationViewer__panel is-target']");
+
+        public static readonly By spanishTargetTextListString = By.XPath("//div[@class='c-TranslationViewer__panel is-source']");
 
         public static readonly By spanFinishReport = By.XPath("//div[@class='c-Sidebar__tab'][text()[contains(.,'Finish or Report')]]");
 
         
         public static readonly By lisToDoTasksIconsListData = By.XPath("//div[@class='c-TopBar__navWrapper']");
 
-        public static readonly  IWebElement element;
+       public static readonly IWebElement  elementList;
+
+        
         public string atribute = null;
 
         public void CheckToDoTask()
         {
             //element.FindElement(lisToDoTasksIconsListData);
-            IList<IWebElement> allOptions = null;
+            IList<IWebElement> allOptions = Driver.FindElements(lisToDoTasksIconsListData);
 
             
 
