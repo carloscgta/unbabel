@@ -5,40 +5,31 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Unbabel.Annotation.Test.UI.Screens;
 
 namespace Inm.Mobile.Test.UI.Screens
 {
-    class Login_Page
+    class Login_Page: Base
     {
-        [FindsBy(How = How.XPath, Using = "//button[@text='Login']")]
-        [CacheLookup]
-        public IWebElement btnDoLogin { get; set; }
 
-        [FindsBy(How = How.ClassName, Using = "//input[@id='username']")]
-        [CacheLookup]
-        public IWebElement inputUserName { get; set; }
+        public static readonly By btnDoLogin = By.XPath("//button[@text='Login']");
 
+        public static readonly By inputUserName = By.XPath("//input[@id='username']");
 
-        [FindsBy(How = How.ClassName, Using = "//input[@id='password']")]
-        [CacheLookup]
-        public IWebElement inputSenha { get; set; }
-
-        //update the locators
-
+        public static readonly By inputSenha = By.XPath("//input[@id='password']");
+        
+        
 
         public void performLogin(string user, string password)
         {
 
+            Driver.FindElement(inputUserName).SendKeys(user);
 
-            inputUserName.SendKeys(user);
+            Driver.FindElement(inputSenha).SendKeys(password);
 
+            Driver.FindElement(btnDoLogin).Click();
 
-            inputSenha.SendKeys(password);
-
-
-            btnDoLogin.Click();
-
-
+            
         }
 
     }

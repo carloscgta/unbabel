@@ -19,7 +19,6 @@ namespace Inm.Mobile.Test.UI.Screens
         public static readonly By iconGT = By.XPath("//div[@class='c-ToggleGroup__item is-active'][text()[contains(.,'GT')]]");
 
         public static readonly By linkAnnotations = By.XPath("(//div[@class='c-AnnotateApp__main g-container']//following-sibling::span/..)[2]");
-       
         
         public static readonly By linkFinishOrReport = By.XPath("(//div[@class='c-Sidebar__tab']//following-sibling::span/..)[6]");
 

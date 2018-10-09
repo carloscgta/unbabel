@@ -1,15 +1,18 @@
-﻿using System;
+﻿using Inm.Mobile.Test.UI.Screens;
+using System;
 using TechTalk.SpecFlow;
 
-namespace Inm.Mobile.Test.UI.StepsDefinitions
+namespace Unbabel.Annotation.Test.UI.StepsDefinitions
 {
     [Binding]
     public class AnnotationSteps
     {
+        UnbabelAnnotation_HomePage annotationpage = new UnbabelAnnotation_HomePage();
+        Login_Page login = new Login_Page();
         [Given(@"I am logged into the Annotation tool")]
         public void GivenIAmLoggedIntoTheAnnotationTool()
         {
-            
+            login.performLogin("emanuel+annotator6", "carlos@unbabel");
         }
         
         [When(@"I select one test for perform the annotation")]
