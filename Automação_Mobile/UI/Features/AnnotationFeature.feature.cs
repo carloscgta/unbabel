@@ -17,20 +17,20 @@ namespace Inm.Mobile.Test.UI.Features
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [TechTalk.SpecRun.FeatureAttribute("Login", SourceFile="UI\\Features\\Login.feature", SourceLine=1)]
-    public partial class LoginFeature
+    [TechTalk.SpecRun.FeatureAttribute("Annotation", SourceFile="UI\\Features\\AnnotationFeature.feature", SourceLine=0)]
+    public partial class AnnotationFeature
     {
         
         private TechTalk.SpecFlow.ITestRunner testRunner;
         
-#line 1 "Login.feature"
+#line 1 "AnnotationFeature.feature"
 #line hidden
         
         [TechTalk.SpecRun.FeatureInitialize()]
         public virtual void FeatureSetup()
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner();
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("pt-BR"), "Login", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Annotation", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -66,18 +66,33 @@ namespace Inm.Mobile.Test.UI.Features
             testRunner.CollectScenarioErrors();
         }
         
-        [TechTalk.SpecRun.ScenarioAttribute("Efetuar login com sucesso", SourceLine=3)]
-        public virtual void EfetuarLoginComSucesso()
+        [TechTalk.SpecRun.ScenarioAttribute("Perform an Annotation Task", SourceLine=4)]
+        public virtual void PerformAnAnnotationTask()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Efetuar login com sucesso", null, ((string[])(null)));
-#line 4
- this.ScenarioInitialize(scenarioInfo);
-            this.ScenarioStart();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Perform an Annotation Task", null, ((string[])(null)));
 #line 5
-  testRunner.When("efetuar login \"yamrodri@inmetrics.com.br\" \"novagol123\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Quando ");
+this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
 #line 6
-  testRunner.Then("usuário foi logado com sucesso exibindo o nome do usuário \"Gustavo Yam Rodrigues\"" +
-                    "", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Entao ");
+ testRunner.Given("I am logged into the Annotation tool", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 7
+ testRunner.When("I select one test for perform the annotation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 8
+ testRunner.And("Select the Sorty by radio", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 9
+ testRunner.Then("select the text to perform the annotation", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 10
+ testRunner.And("Click in Annotate", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 11
+ testRunner.And("Select the Error type", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 12
+ testRunner.And("Click in Finish or Report and choose Finish", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 13
+ testRunner.Then("set the task Comment text in the text field", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 14
+ testRunner.And("Click in Finish button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 15
+ testRunner.Then("the Annotation is finished", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

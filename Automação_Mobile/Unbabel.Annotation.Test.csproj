@@ -94,46 +94,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UI\Features\AnnotationFeature.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AnnotationFeature.feature</DependentUpon>
+    </Compile>
     <Compile Include="UI\Screens\Login_Page.cs" />
     <Compile Include="UI\Screens\UnbabelAnnotation_HomePage.cs" />
     <Compile Include="UI\Selenium\Drivers\IWebDriverProvider.cs" />
     <Compile Include="UI\Selenium\AnnotationApp.cs" />
     <Compile Include="UI\Environment\ElementModel.cs" />
     <Compile Include="UI\Config\EnvironmentConfig.cs" />
-    <Compile Include="UI\Features\Checkin.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Checkin.feature</DependentUpon>
-    </Compile>
-    <Compile Include="UI\Features\Login.feature.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Login.feature</DependentUpon>
-    </Compile>
     <Compile Include="UI\Screens\Base.cs" />
     <Compile Include="UI\Config\Hooks.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UI\Selenium\MobileApplication.cs" />
+    <Compile Include="UI\StepsDefinitions\AnnotationSteps.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="Default.srprofile">
       <SubType>Designer</SubType>
     </None>
-    <None Include="UI\Features\Checkin.feature">
+    <None Include="UI\Features\AnnotationFeature.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Checkin.feature.cs</LastGenOutput>
+      <LastGenOutput>AnnotationFeature.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
     <None Include="runtests.cmd" />
-    <None Include="UI\Features\Login.feature">
-      <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Login.feature.cs</LastGenOutput>
-    </None>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UI\StepsDefinitions\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
